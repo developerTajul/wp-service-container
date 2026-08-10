@@ -1,0 +1,49 @@
+{
+  "name": "devlinkstudios/wp-service-container",
+  "description": "A lightweight, Laravel-inspired PSR-11 service container with auto-wiring, designed for WordPress plugins.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "wordpress",
+    "wordpress-plugin",
+    "container",
+    "service-container",
+    "dependency-injection",
+    "di",
+    "psr-11",
+    "autowiring"
+  ],
+  "authors": [
+    {
+      "name": "DevLink Studios"
+    }
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "psr/container": "^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.6 || ^10.5 || ^11.5"
+  },
+  "provide": {
+    "psr/container-implementation": "2.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DevLinkStudios\\WPServiceContainer\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DevLinkStudios\\WPServiceContainer\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
