@@ -294,8 +294,8 @@ class Container implements ContainerInterface
             return $this->providers[$key];
         }
 
-        $this->providers[$key] = $provider;
         $provider->register();
+        $this->providers[$key] = $provider;
 
         // Registering after boot() has already run — boot this one immediately
         // rather than leaving it half-initialised.
